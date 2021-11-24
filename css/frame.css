@@ -1,8 +1,69 @@
 .frame {
+    display: flex;
+    flex-direction: column;
     box-shadow:  0 0 8px rgba(50, 50, 50, 0.4);
+    overflow: hidden;
     z-index: 1;
     
     background-color: var(--white);
-    padding: 3em;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 55vw;
+    height: 80vh;
+}
+
+.frame_hidden {
+    display: none;
+}
+
+.frame__title {
+    height: 2.5em;
+    background-color: var(--gray-light);
+    display: flex;
+    align-items: center;
+    padding: 5px 2em;
+}
+
+.frame__control_button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 100ms;
+}
+
+.frame__control_button:active {
+    transform: scale(0.9);
+}
+
+.frame__control_button + .frame__control_button {
+    margin-left: 0.5em;
+}
+
+.frame__control_button_to_hidden {
+    background-color: var(--red);
+}
+
+.frame__control_button_to_normal {
+    background-color: var(--yellow);
+}
+
+.frame__control_button_to_turn {
+    background-color: var(--green);
+}
+
+.frame__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.frame__header {
+    height: 40%;
+    background-color: var(--gray);
+}
+
+.frame__content {
+    flex: 1;
+    background-color: var(--white);
 }

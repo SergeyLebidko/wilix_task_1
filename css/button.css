@@ -1,4 +1,5 @@
 .start-button {
+    display: block;
     padding: 1em 5em;
     border-radius: 3px;
     background-color: var(--white);
@@ -11,4 +12,8 @@
 .start-button:active {
     box-shadow: none;
     transform: translateY(4px);
+}
+
+.start-button_hidden {
+    display: none;
 }
