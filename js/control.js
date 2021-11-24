@@ -1,19 +1,66 @@
-const startButton = document.getElementById('start-button');
+const HIDDEN = 'hidden';
+const NORMAL = 'normal';
+const FULL_SCREEN = 'full_screen';
+const TURN = 'turn';
+
+let lastFrameMode = null;
+let curFrameMode = HIDDEN;
+
+const startBtn = document.getElementById('start-button');
 
 const frame = document.getElementById('frame');
-const frameToHiddenBtn = document.getElementById('frame-to-hidden-btn');
-const frameToNormalBtn = document.getElementById('frame-to-normal-btn');
-const frameToTurnBtn = document.getElementById('frame-to-turn-btn');
+const frameRedBtn = document.getElementById('frame-red-btn');
+const frameYellowBtn = document.getElementById('frame-yellow-btn');
+const frameGreenBtn = document.getElementById('frame-green-btn');
 
 // При клике на стартовую кнопку - убираем её и показываем псевдобраузер
-startButton.addEventListener('click', () => {
-    startButton.classList.add('start-button_hidden');
-    frame.classList.remove('frame_hidden');
+startBtn.addEventListener('click', () => {
+    startBtn.classList.add('start-button_hidden');
+    setFrameMode(NORMAL);
 });
 
 // При клике на кнопку закрытия псевдобраузера (красную) - убираем его и показываем стартовую кнопку
-frameToHiddenBtn.addEventListener('click', () => {
-    startButton.classList.remove('start-button_hidden');
-    frame.classList.add('frame_hidden');
+frameRedBtn.addEventListener('click', () => {
+    startBtn.classList.remove('start-button_hidden');
+    setFrameMode(HIDDEN);
 });
 
+frameYellowBtn.addEventListener('click', () => {
+    if(curFrameMode === FULL_SCREEN || curFrameMode === NORMAL) {
+        setFrameMode(TURN);
+        return;
+    }
+    setFrameMode(lastFrameMode);
+});
+
+frameGreenBtn.addEventListener('click', () => {
+    if (curFrameMode === FULL_SCREEN){
+        setFrameMode(NORMAL);
+        return;
+    }
+    setFrameMode(FULL_SCREEN);
+});
+
+function setFrameMode(mode) {
+    let classesList = ['frame'];
+    switch (mode) {
+        case HIDDEN: {
+            classesList.push('frame_hidden');
+            break;
+        }
+        case NORMAL: {
+            classesList.push('frame_normal');
+            break;
+        }
+        case FULL_SCREEN: {
+            classesList.push('frame__full_screen');
+            break;
+        }
+        case TURN: {
+            classesList.push('frame_turn');
+        }
+    }
+    frame.className = classesList.join(' ');
+    lastFrameMode = curFrameMode;
+    curFrameMode = mode;
+}

@@ -4,15 +4,30 @@
     box-shadow:  0 0 8px rgba(50, 50, 50, 0.4);
     overflow: hidden;
     z-index: 1;
-    
-    background-color: var(--white);
+}
+
+.frame_hidden {
+    display: none;
+}
+
+.frame_normal {
     border-radius: 10px;
     width: 55vw;
     height: 80vh;
 }
 
-.frame_hidden {
-    display: none;
+.frame__full_screen {
+    width: 100%;
+    height: 100%;
+}
+
+.frame_turn {
+    position: absolute;
+    left: 2em;
+    bottom: 2em;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 10px;
 }
 
 .frame__title {
@@ -39,15 +54,15 @@
     margin-left: 0.5em;
 }
 
-.frame__control_button_to_hidden {
+.frame__control_button_red {
     background-color: var(--red);
 }
 
-.frame__control_button_to_normal {
+.frame__control_button_yellow {
     background-color: var(--yellow);
 }
 
-.frame__control_button_to_turn {
+.frame__control_button_green {
     background-color: var(--green);
 }
 
