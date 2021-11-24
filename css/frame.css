@@ -1,3 +1,5 @@
+/* Стили для окна в целом */
+
 .frame {
     display: flex;
     flex-direction: column;
@@ -29,6 +31,8 @@
     height: 2.5em;
     border-radius: 10px;
 }
+
+/* Стили для заголовка окна и кнопок на нем */
 
 .frame__title {
     height: 2.5em;
@@ -66,6 +70,8 @@
     background-color: var(--green);
 }
 
+/* Стили для содержимого окна */
+
 .frame__body {
     flex: 1;
     display: flex;
@@ -76,6 +82,26 @@
 .frame__header {
     height: 40%;
     background-color: var(--gray);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame__header_big_caption, .frame__header_small_caption {
+    background-color: var(--gray-dark);
+    height: 1.5em;
+    border-radius: 3px;
+}
+
+.frame__header_big_caption {
+    width: 14em;
+}
+
+.frame__header_small_caption {
+    width: 9em;
+    margin-top: 1em;
 }
 
 .frame__content {
