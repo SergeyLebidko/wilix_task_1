@@ -1,0 +1,24 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background div:nth-child(1), .background div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background div:nth-child(1) {
+    background-color: var(--back1-color);
+}
+
+.background div:nth-child(2) {
+    background-color: var(--back2-color);
+    clip-path: polygon(0 0, 85% 0, 15% 100%, 0 100%);
+}
