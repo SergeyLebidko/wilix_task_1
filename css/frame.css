@@ -1,0 +1,8 @@
+.frame {
+    box-shadow:  0 0 8px rgba(50, 50, 50, 0.4);
+    z-index: 1;
+    
+    background-color: var(--white);
+    padding: 3em;
+    border-radius: 5px;
+}
