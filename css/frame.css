@@ -139,22 +139,34 @@
 }
 
 .frame__grid_wrapper {
-    width: 85%;
+    width: 95%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(12em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
     grid-gap: 1em;
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+    .frame__grid_wrapper {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .frame__grid_wrapper {
+        width: 85%;
+    }
+}
+
 .frame__card {
+    min-height: 12em;
     display: flex;
     flex-direction: column;
-    min-height: 14em;
 }
 
 .frame__card_image {
-    min-width: 12em;
-    min-height: 12em;
+    width: 100%;
+    min-height: 10em;
     background-color: var(--gray);
     border-radius: 3px;
 }
