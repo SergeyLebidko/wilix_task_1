@@ -1,4 +1,12 @@
 :root {
     --back1-color: rgb(225, 94, 131);
     --back2-color: rgb(244, 231, 112);
+
+    --gray-light: rgb(232, 235, 243);
+    --gray: rgb(218, 224, 228);
+    --gray-dark: rgb(197, 203, 207);
+    --red: rgb(237, 76, 93);
+    --yelloy: rgb(241, 153, 65);
+    --green: rgb(70, 173, 88);
+    --white: rgb(255, 255, 255);
 }
