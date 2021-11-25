@@ -25,7 +25,7 @@ frameRedBtn.addEventListener('click', () => {
     setFrameMode(HIDDEN);
 });
 
-// При клике на желтую кнопку - сворачиваем псевдобраузер в "трей" или разворачиваем его оттуда
+// При клике на желтую кнопку - сворачиваем псевдобраузер в "трей" или разворачиваем его оттуда в то состояние, в которм он находился до сворачивания
 frameYellowBtn.addEventListener('click', () => {
     if(curFrameMode === FULL_SCREEN || curFrameMode === NORMAL) {
         setFrameMode(TURN);

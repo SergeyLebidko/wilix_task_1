@@ -1,0 +1,37 @@
+/* Стили для заголовка окна псевдобраузера и его содержимого (кнопок управления окном) */
+
+.frame__title {
+    height: 2.5em;
+    background-color: var(--gray-light);
+    display: flex;
+    align-items: center;
+    padding: 5px 2em;
+}
+
+.frame__control_button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 100ms;
+}
+
+.frame__control_button:active {
+    transform: scale(0.9);
+}
+
+.frame__control_button + .frame__control_button {
+    margin-left: 0.5em;
+}
+
+.frame__control_button_red {
+    background-color: var(--red);
+}
+
+.frame__control_button_yellow {
+    background-color: var(--yellow);
+}
+
+.frame__control_button_green {
+    background-color: var(--green);
+}
