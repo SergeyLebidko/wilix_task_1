@@ -13,50 +13,48 @@
     <link rel="stylesheet" href="css/frame.css" />
 </head>
 
-<body>
-    <div id="root">
-        <div class="background">
-            <div></div>
-            <div></div>
+<body class="root">
+    <div class="background">
+        <div></div>
+        <div></div>
+    </div>
+
+    <button id="start-button" class="start-button">Button</button>
+
+    <div id="frame" class="frame frame_hidden">
+        <div class="frame__title">
+            <button id="frame-red-btn" class="frame__control_button frame__control_button_red"></button>
+            <button id="frame-yellow-btn" class="frame__control_button frame__control_button_yellow"></button>
+            <button id="frame-green-btn" class="frame__control_button frame__control_button_green"></button>
         </div>
-
-        <button id="start-button" class="start-button">Button</button>
-
-        <div id="frame" class="frame frame_hidden">
-            <div class="frame__title">
-                <button id="frame-red-btn" class="frame__control_button frame__control_button_red"></button>
-                <button id="frame-yellow-btn" class="frame__control_button frame__control_button_yellow"></button>
-                <button id="frame-green-btn" class="frame__control_button frame__control_button_green"></button>
+        <div class="frame__body">
+            <div class="frame__header">
+                <h1 class="frame__header_big_caption"></h1>
+                <h2 class="frame__header_small_caption"></h2>
             </div>
-            <div class="frame__body">
-                <div class="frame__header">
-                    <h1 class="frame__header_big_caption"></h1>
-                    <h2 class="frame__header_small_caption"></h2>
-                </div>
-                <div class="frame__content">
-                    <div class="frame__grid_wrapper">
-                        <div class="frame__card">
-                            <div class="frame__card_image"></div>
-                            <h3 class="frame__card_caption frame__card_caption_small"></h3>
-                        </div>
-                        <div class="frame__card">
-                            <div class="frame__card_image"></div>
-                            <h3 class="frame__card_caption frame__card_caption_large"></h3>
-                        </div>
-                        <div class="frame__card">
-                            <div class="frame__card_image"></div>
-                            <h3 class="frame__card_caption frame__card_caption_medium"></h3>
-                        </div>
-                        <div class="frame__card">
-                            <div class="frame__card_image"></div>
-                            <h3 class="frame__card_caption frame__card_caption_very_small"></h3>
-                        </div>
+            <div class="frame__content">
+                <div class="frame__grid_wrapper">
+                    <div class="frame__card">
+                        <div class="frame__card_image"></div>
+                        <h3 class="frame__card_caption frame__card_caption_small"></h3>
+                    </div>
+                    <div class="frame__card">
+                        <div class="frame__card_image"></div>
+                        <h3 class="frame__card_caption frame__card_caption_large"></h3>
+                    </div>
+                    <div class="frame__card">
+                        <div class="frame__card_image"></div>
+                        <h3 class="frame__card_caption frame__card_caption_medium"></h3>
+                    </div>
+                    <div class="frame__card">
+                        <div class="frame__card_image"></div>
+                        <h3 class="frame__card_caption frame__card_caption_very_small"></h3>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
     <script src="js/control.js"></script>
 </body>
 
